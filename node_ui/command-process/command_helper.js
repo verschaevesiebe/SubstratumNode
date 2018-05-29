@@ -52,8 +52,8 @@ module.exports = (function () {
   function init () {
     switch (process.platform) {
       case 'win32':
-        this.binaryPath = getBinaryPath('win\\')
-        this.scriptPath = getScriptPath('cmd')
+        this.binaryPath = '"' + getBinaryPath('win\\') + '"'
+        this.scriptPath = '"' + getScriptPath('cmd') + '"'
         this.startSubstratumNode = startNodeWindows
         this.stopSubstratumNode = stopNodeWindows
         break
